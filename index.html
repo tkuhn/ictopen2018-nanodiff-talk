@@ -76,37 +76,6 @@ text-transform: none;
 </section>
 
 <section>
-<h3>Specify Input Data:<br/>Current Best Practice</h3>
-<div class="fragment">
-<p><strong><span class="cem">In papers:</span></strong></p>
-<quote>
-"... we used DisGeNET-RDF version 4.0 [32]"
-</quote>
-<quote>
-<small>[32] N. Queralt-Rosinach, J. Piñero, À. Bravo, F. Sanz, and L. I. Furlong. DisGeNET-RDF: harnessing the innovative power of the semantic web to explore the genetic basis of diseases. Bioinformatics, 32(14), 2016.</small>
-</quote>
-</div>
-<div class="fragment">
-<p><strong><span class="cem">In code:</span></strong></p>
-<pre>
-wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
-# Run analysis here
-</pre>
-</div>
-</section>
-
-<section>
-<h3>Requirements and Related Work</h3>
-<p>We need:</p>
-<ul>
-<li>Principled Linked Data <span class="cem">versioning</span></li>
-<li><span class="cem">Cryptographically reliable</span> dataset identifiers</li>
-<li>References to <span class="cem">subsets</span> of larger datasets</li>
-</ul>
-<p>Related work addresses these individually but not in combination.</p>
-</section>
-
-<section>
 <h3>Nanopublications</h3>
 <img class="plain stretch" src="img/nanopub.svg"/>
 <p><small><a href="http://nanopub.org">http://nanopub.org</a></small></p>
@@ -120,60 +89,8 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 </section>
 
 <section data-transition="slide none">
-<h3>Trusty Nanopublications</h3>
-<img class="plain stretch" src="img/trustynanopubs1.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Trusty Nanopublications</h3>
-<img class="plain stretch" src="img/trustynanopubs2.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Trusty Nanopublications</h3>
-<img class="plain stretch" src="img/trustynanopubs3.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Trusty Nanopublications</h3>
-<img class="plain stretch" src="img/trustynanopubs.svg"/>
-</section>
-
-<section>
-<h3>A Server Network for Nanopublications</h3>
-<img class="plain stretch" src="img/servers.svg"/>
-</section>
-
-<section>
-<h3>9M Nanopublications on the Server Network</h3>
-<img class="plain stretch" src="img/npmonitor.png"/>
-<p><small><a href="http://purl.org/nanopub/monitor">http://purl.org/nanopub/monitor</a></small></p>
-</section>
-
-<section data-transition="slide none">
-<h3>Approach: Granual Versioning</h3>
-<img class="plain stretch" src="img/changes01.svg"/>
-</section>
-
-<section data-transition="none">
 <h3>Approach: Granual Versioning</h3>
 <img class="plain stretch" src="img/changes02.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Approach: Granual Versioning</h3>
-<img class="plain stretch" src="img/changes03.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Approach: Granual Versioning</h3>
-<img class="plain stretch" src="img/changes04.svg"/>
-</section>
-</section>
-
-<section data-transition="none">
-<h3>Approach: Granual Versioning</h3>
-<img class="plain stretch" src="img/changes05.svg"/>
 </section>
 
 <section data-transition="none">
@@ -188,32 +105,36 @@ wget http://rdf.disgenet.org/download/v4.0.0/gda.ttl.gz
 
 <section data-transition="none">
 <h3>Approach: Granual Versioning</h3>
-<img class="plain stretch" src="img/changes10.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Approach: Granual Versioning</h3>
-<img class="plain stretch" src="img/changes11.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Approach: Granual Versioning</h3>
 <img class="plain stretch" src="img/changes12.svg"/>
 </section>
 
 <section data-transition="none">
 <h3>Approach: Granual Versioning</h3>
-<img class="plain stretch" src="img/changes13.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Approach: Granual Versioning</h3>
-<img class="plain stretch" src="img/changes14.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Approach: Granual Versioning</h3>
 <img class="plain stretch" src="img/changes.svg"/>
+</section>
+
+<section>
+<h3>&gt;10M Nanopublications on a Server Network</h3>
+<img class="plain stretch" src="img/npmonitor.png"/>
+<p><small><a href="http://purl.org/nanopub/monitor">http://purl.org/nanopub/monitor</a></small></p>
+</section>
+
+<section>
+<h3>Data Publishing with Nanopublication Datasets</h3>
+<p>Researchers can now exactly specify their input data.</p>
+<p><strong><span class="cem">In papers:</span></strong></p>
+<quote>
+"... we used DisGeNET data about these diseases [27]"
+</quote>
+<quote>
+<small>[27] Nanopublications from DisGeNET v4.0.0.0 about umls:C0003507 or umls:C1956346. <span class="cem2">http://purl.org/np/RAcf4tihZLL_aK81hwThIrNxjOhks4sEloBStEgzyR1tI</span>, 11 May 2017.</small>
+</quote>
+<p><strong><span class="cem">In code:</span></strong></p>
+<pre>
+np get -c -o data.trig \
+  <span class="cem2">RAcf4tihZLL_aK81hwThIrNxjOhks4sEloBStEgzyR1tI</span>
+# Run analysis here
+</pre>
 </section>
 
 <section>
@@ -247,16 +168,6 @@ Evaluation based on <span class="cem">WikiPathways</span>, a community-curated o
 <img class="plain stretch" src="img/wp-monthly2.svg"/>
 </section>
 
-<section data-transition="none">
-<h3>WikiPathways Versions</h3>
-<img class="plain stretch" src="img/wp-monthly3.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>WikiPathways Versions</h3>
-<img class="plain stretch" src="img/wp-monthly.svg"/>
-</section>
-
 <section>
 <h3>Evaluation 2</h3>
 <p><strong><span class="cem">How well does it work on the data consumer side?</span></strong></p>
@@ -284,21 +195,6 @@ Evaluation based on <span class="cem">DisGeNET</span>, a database on human disea
 </section>
 
 <section data-transition="slide none">
-<h3>Sizes of DisGeNET Subsets (Compared to Decontextualized Full Dataset)</h3>
-<img class="plain stretch" src="img/disgenet-subsets1.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Sizes of DisGeNET Subsets (Compared to Decontextualized Full Dataset)</h3>
-<img class="plain stretch" src="img/disgenet-subsets2.svg"/>
-</section>
-
-<section data-transition="none">
-<h3>Sizes of DisGeNET Subsets (Compared to Decontextualized Full Dataset)</h3>
-<img class="plain stretch" src="img/disgenet-subsets.svg"/>
-</section>
-
-<section data-transition="slide none">
 <h3>Time to Download Typical Subset</h3>
 <p>Downloading full dataset from DisGeNET server</p>
 <p><strong><span class="cem">VERSUS</span></strong></p>
@@ -317,32 +213,6 @@ Evaluation based on <span class="cem">DisGeNET</span>, a database on human disea
 <section>
 <h3>Data Publishing with Nanopublication Datasets</h3>
 <img class="plain stretch" src="img/nanodiff-datasets.svg"/>
-</section>
-
-<section>
-<h3>Data Publishing with Nanopublication Datasets</h3>
-<p>Researchers can now exactly specify their input data.</p>
-<p><strong><span class="cem">In papers:</span></strong></p>
-<quote>
-"... we used DisGeNET data about these diseases [27]"
-</quote>
-<quote>
-<small>[27] Nanopublications from DisGeNET v4.0.0.0 about umls:C0003507 or umls:C1956346. <span class="cem2">http://purl.org/np/RAcf4tihZLL_aK81hwThIrNxjOhks4sEloBStEgzyR1tI</span>, 11 May 2017.</small>
-</quote>
-<p><strong><span class="cem">In code:</span></strong></p>
-<pre>
-np get -c -o data.trig \
-  <span class="cem2">RAcf4tihZLL_aK81hwThIrNxjOhks4sEloBStEgzyR1tI</span>
-# Run analysis here
-</pre>
-</section>
-
-<section>
-<h3>Nanopublication "Overhead" Disappears</h3>
-<p><span class="cem">Price of nanopublications is offset by:</span></p>
-<ul>
-<li>the benefits of incremental versioning</li>
-<li>by being able to refer to needed subset</li>
 </section>
 
 <section>
